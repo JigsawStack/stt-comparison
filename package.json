@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+      "aai": "^15.0.0",
+      "assemblyai": "^4.7.1",
+      "groq": "^3.62.3",
+      "groq-sdk": "^0.7.0",
+      "jigsawstack": "^0.0.13"
+    }
+  }
+  
