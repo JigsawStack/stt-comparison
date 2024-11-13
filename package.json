@@ -1,10 +1,17 @@
 {
-    "dependencies": {
-      "aai": "^15.0.0",
-      "assemblyai": "^4.7.1",
-      "groq": "^3.62.3",
-      "groq-sdk": "^0.7.0",
-      "jigsawstack": "^0.0.13"
-    }
+  "name": "stt-comparison",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx benchmark.ts"
+  },
+  "dependencies": {
+    "aai": "^15.0.0",
+    "assemblyai": "^4.7.1",
+    "dotenv": "^16.4.5",
+    "groq-sdk": "^0.7.0",
+    "jigsawstack": "^0.0.13"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
-  
+}
