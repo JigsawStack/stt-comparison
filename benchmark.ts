@@ -32,6 +32,7 @@ const runGroq = (audioUrl: string) => {
   return groq.audio.transcriptions.create({
     file: fs.createReadStream(audioUrl),
     model: "whisper-large-v3-turbo",
+    response_format: "verbose_json",
   });
 };
 
