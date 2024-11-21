@@ -20,7 +20,7 @@ const runGroq = async () => {
   console.time("STT_Groq");
   try {
     await groq.audio.transcriptions.create({
-      file: fs.createReadStream("sample.mp4"),
+      file: fs.createReadStream("sample-1.mp4"),
       model: "whisper-large-v3-turbo",
       language: "en",
       temperature: 0.0,
