@@ -1,0 +1,96 @@
+{
+  "samples": {
+    "sample_1": {
+      "url": "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_short_audio_sample_1.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9zaG9ydF9hdWRpb19zYW1wbGVfMS5tcDQiLCJpYXQiOjE3MzIyMDIzMDYsImV4cCI6MzE1NTMwMDY2NjMwNn0.I0-T5I-nkdeykmizHmq1Ut_Jjs66DxzApv2XbrV9MyM&t=2024-11-21T15%3A18%3A26.030Z",
+      "results": {
+        "Groq": [
+          8502.00775,
+          8230.064124999999,
+          7421.560708000001,
+          7159.054499999998,
+          7146.681749999996,
+          7192.314666999999,
+          7393.998167000005,
+          7244.651666000005,
+          8405.809666999994,
+          6814.9257919999945
+        ],
+        "JigsawStack": [
+          7937.234834,
+          9692.32,
+          4813.097791999997,
+          9046.267416000002,
+          4247.933624999998,
+          9062.771708,
+          7380.5067500000005,
+          3563.306375,
+          5745.638292000003,
+          17943.061208
+        ],
+        "AssemblyAI": [
+          9649.934375,
+          8726.723042000001,
+          8469.684834,
+          8722.516083999999,
+          9368.418624999998,
+          12510.068165999997,
+          8779.791708000004,
+          11330.557958000005,
+          9469.550332999992,
+          11455.475167000011
+        ]
+      },
+      "results_avg": {
+        "Groq": 7551.106879200001,
+        "JigsawStack": 7943.2138,
+        "AssemblyAI": 9848.272029200001
+      }
+    },
+    "sample_2": {
+      "url": "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_very_short_audio_sample_2.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF92ZXJ5X3Nob3J0X2F1ZGlvX3NhbXBsZV8yLm1wMyIsImlhdCI6MTczMjIwMzIwNywiZXhwIjozMTU1MzAwNjY3MjA3fQ._R0cLbrIx_FUR3CMRYaUMj616diA_1fjWUcVq2vAONg&t=2024-11-21T15%3A33%3A27.154Z",
+      "results": {
+        "Groq": [
+          1109.6701670000039,
+          811.8495419999963,
+          861.6733340000064,
+          858.6896669999842,
+          1125.1502080000064,
+          619.171250000014,
+          1042.2473750000063,
+          1056.0358750000014,
+          1193.854083000013,
+          1297.2149170000048
+        ],
+        "JigsawStack": [
+          2904.093584000002,
+          14401.371416000009,
+          3000.758666000009,
+          12787.022291000001,
+          2558.9794999999867,
+          14854.090417,
+          2580.9347919999855,
+          8390.763082999998,
+          2222.0855410000077,
+          10813.617790999997
+        ],
+        "AssemblyAI": [
+          4927.164082999996,
+          3894.451667000001,
+          5172.128917000009,
+          7438.486999999994,
+          5010.375375000003,
+          5931.861582999991,
+          5087.369207999989,
+          3925.3066249999974,
+          4899.432292000012,
+          4100.288874999998
+        ]
+      },
+      "results_avg": {
+        "Groq": 997.5556418000036,
+        "JigsawStack": 7451.3717080999995,
+        "AssemblyAI": 5038.686562499999
+      }
+    }
+  }
+}
