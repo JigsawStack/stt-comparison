@@ -49,7 +49,7 @@ const runAssemblyAI = async (audioUrl: string) => {
   });
 };
 
-const sst = async (
+const stt = async (
   func: (audioUrl: string) => Promise<void>,
   audioUrl: string
 ) => {
@@ -133,7 +133,7 @@ const benchmark = async () => {
 
       const providerResults = await Promise.all(
         providerKeys.map((provider) =>
-          sst(
+          stt(
             providers[provider],
             provider == "Groq"
               ? `samples/${audioSamples[audioSampleIndex].name}`
