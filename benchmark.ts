@@ -4,6 +4,7 @@ import fs from "fs";
 import Groq from "groq-sdk";
 import { AssemblyAI } from "assemblyai";
 import { JigsawStack } from "jigsawstack";
+import OpenAI from "openai";
 
 const audioSamples = [
   {
@@ -20,6 +21,7 @@ const audioSamples = [
   },
 ];
 
+const openai = new OpenAI();
 const aai = new AssemblyAI({ apiKey: process.env.ASSEMBLYAI_API_KEY! });
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY!,
@@ -39,6 +41,13 @@ const runGroq = (audioUrl: string) => {
 const runJigsawStack = (audioUrl: string) => {
   return jigsawstack.audio.speech_to_text({
     url: audioUrl,
+  });
+};
+
+const runOpenAI = (audioUrl: string) => {
+  return openai.audio.transcriptions.create({
+    file: fs.createReadStream(audioUrl),
+    model: "whisper-1",
   });
 };
 
@@ -69,10 +78,11 @@ const providers = {
   Groq: runGroq,
   JigsawStack: runJigsawStack,
   AssemblyAI: runAssemblyAI,
+  Openai: runOpenAI,
 };
 
 const benchmark = async () => {
-  const iterations = 10;
+  const iterations = 5;
   const providerKeys = Object.keys(providers);
 
   if (!fs.existsSync("samples")) {
@@ -136,7 +146,7 @@ const benchmark = async () => {
         providerKeys.map((provider) =>
           stt(
             providers[provider],
-            provider == "Groq"
+            ["Groq", "Openai"].includes(provider)
               ? `samples/${audioSamples[audioSampleIndex].name}`
               : audioURL
           )

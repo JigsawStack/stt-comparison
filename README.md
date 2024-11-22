@@ -11,6 +11,7 @@ Before running this script, ensure you have the following:
   - **Groq SDK**
   - **AssemblyAI**
   - **JigsawStack**
+  - **Openai**
 
 ## Installation
 
@@ -35,6 +36,9 @@ Before running this script, ensure you have the following:
      const aai = new AssemblyAI({ apiKey: "YOUR_ASSEMBLYAI_API_KEY" });
      const groq = new Groq({ apiKey: "YOUR_GROQ_API_KEY" });
      const jigsawstack = new JigsawStack({ apiKey: "YOUR_JIGSAWSTACK_API_KEY" });
+     const openai = new OpenAI({
+      apiKey: "YOUR_OPENAI_API_KEY",
+     });
      ```
 
 2. **Set the audio file or URL**:
@@ -64,6 +68,7 @@ Iteration 1
 Average response time for Groq: 500 ms
 Average response time for JigsawStack: 450 ms
 Average response time for AssemblyAI: 400 ms
+Average response time for Openai: 400 ms
 ```
 
 ## Audio Samples

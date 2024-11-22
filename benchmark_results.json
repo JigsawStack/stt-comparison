@@ -1,95 +1,120 @@
 {
   "samples": {
-    "sample_1": {
+    "sample1.mp4": {
       "url": "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_short_audio_sample_1.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9zaG9ydF9hdWRpb19zYW1wbGVfMS5tcDQiLCJpYXQiOjE3MzIyMDIzMDYsImV4cCI6MzE1NTMwMDY2NjMwNn0.I0-T5I-nkdeykmizHmq1Ut_Jjs66DxzApv2XbrV9MyM&t=2024-11-21T15%3A18%3A26.030Z",
       "results": {
         "Groq": [
-          8502.00775,
-          8230.064124999999,
-          7421.560708000001,
-          7159.054499999998,
-          7146.681749999996,
-          7192.314666999999,
-          7393.998167000005,
-          7244.651666000005,
-          8405.809666999994,
-          6814.9257919999945
+          9761.152333,
+          11717.913583000001,
+          11044.562417000001,
+          9230.611790999996,
+          9861.444709000003
         ],
         "JigsawStack": [
-          7937.234834,
-          9692.32,
-          4813.097791999997,
-          9046.267416000002,
-          4247.933624999998,
-          9062.771708,
-          7380.5067500000005,
-          3563.306375,
-          5745.638292000003,
-          17943.061208
+          4011.796291,
+          3572.8013329999994,
+          3098.763500000001,
+          3583.0362500000047,
+          3053.3148329999967
         ],
         "AssemblyAI": [
-          9649.934375,
-          8726.723042000001,
-          8469.684834,
-          8722.516083999999,
-          9368.418624999998,
-          12510.068165999997,
-          8779.791708000004,
-          11330.557958000005,
-          9469.550332999992,
-          11455.475167000011
+          10076.359666,
+          10352.551292,
+          10062.501167000002,
+          10162.216583000001,
+          14319.354458000002
+        ],
+        "Openai": [
+          17825.949542,
+          19997.531833,
+          18916.243167,
+          16044.440917,
+          18024.56545899999
         ]
       },
       "results_avg": {
-        "Groq": 7551.106879200001,
-        "JigsawStack": 7943.2138,
-        "AssemblyAI": 9848.272029200001
+        "Groq": 10323.1369666,
+        "JigsawStack": 3463.942441400001,
+        "AssemblyAI": 10994.5966332,
+        "Openai": 18161.7461836
       }
     },
-    "sample_2": {
+    "sample2.mp3": {
       "url": "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_very_short_audio_sample_2.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF92ZXJ5X3Nob3J0X2F1ZGlvX3NhbXBsZV8yLm1wMyIsImlhdCI6MTczMjIwMzIwNywiZXhwIjozMTU1MzAwNjY3MjA3fQ._R0cLbrIx_FUR3CMRYaUMj616diA_1fjWUcVq2vAONg&t=2024-11-21T15%3A33%3A27.154Z",
       "results": {
         "Groq": [
-          1109.6701670000039,
-          811.8495419999963,
-          861.6733340000064,
-          858.6896669999842,
-          1125.1502080000064,
-          619.171250000014,
-          1042.2473750000063,
-          1056.0358750000014,
-          1193.854083000013,
-          1297.2149170000048
+          1152.1852079999953,
+          634.8557080000028,
+          834.351542000004,
+          772.775542000003,
+          650.6411669999943
         ],
         "JigsawStack": [
-          2904.093584000002,
-          14401.371416000009,
-          3000.758666000009,
-          12787.022291000001,
-          2558.9794999999867,
-          14854.090417,
-          2580.9347919999855,
-          8390.763082999998,
-          2222.0855410000077,
-          10813.617790999997
+          5338.419165999992,
+          943.7235840000067,
+          1281.4778750000114,
+          979.7356660000078,
+          1038.9879999999976
         ],
         "AssemblyAI": [
-          4927.164082999996,
-          3894.451667000001,
-          5172.128917000009,
-          7438.486999999994,
-          5010.375375000003,
-          5931.861582999991,
-          5087.369207999989,
-          3925.3066249999974,
-          4899.432292000012,
-          4100.288874999998
+          5553.1708329999965,
+          8560.502833999999,
+          6002.961332999999,
+          4251.779041000002,
+          4166.873083999992
+        ],
+        "Openai": [
+          1916.4949170000036,
+          1962.5139160000108,
+          2067.4267499999987,
+          1809.8337500000052,
+          2322.242624999999
         ]
       },
       "results_avg": {
-        "Groq": 997.5556418000036,
-        "JigsawStack": 7451.3717080999995,
-        "AssemblyAI": 5038.686562499999
+        "Groq": 808.9618333999999,
+        "JigsawStack": 1916.468858200003,
+        "AssemblyAI": 5707.057424999997,
+        "Openai": 2015.7023916000035
+      }
+    },
+    "sample3.mp3": {
+      "url": "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_long_audio_sample_3.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9sb25nX2F1ZGlvX3NhbXBsZV8zLm1wMyIsImlhdCI6MTczMjIwMjM0NywiZXhwIjozMTU1MzAwNjY2MzQ3fQ.KX1NxaFIfVRdWFsp1sToQNreRLzWIThJHYGyR6xcGbs&t=2024-11-21T15%3A19%3A07.592Z",
+      "results": {
+        "Groq": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "JigsawStack": [
+          28022.522708000004,
+          27934.571832999995,
+          27458.796082999994,
+          30819.98091699998,
+          27340.401499999978
+        ],
+        "AssemblyAI": [
+          46018.17541699999,
+          42393.801167,
+          47628.615542000014,
+          45388.265625,
+          45207.68325
+        ],
+        "Openai": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "results_avg": {
+        "Groq": -1,
+        "JigsawStack": 28315.25460819999,
+        "AssemblyAI": 45327.3082002,
+        "Openai": -1
       }
     }
   }
