@@ -19,6 +19,10 @@ const audioSamples = [
     name: "sample3.mp3",
     url: "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_long_audio_sample_3.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9sb25nX2F1ZGlvX3NhbXBsZV8zLm1wMyIsImlhdCI6MTczMjIwMjM0NywiZXhwIjozMTU1MzAwNjY2MzQ3fQ.KX1NxaFIfVRdWFsp1sToQNreRLzWIThJHYGyR6xcGbs&t=2024-11-21T15%3A19%3A07.592Z",
   },
+  {
+    name: "sample4.mp3",
+    url: "https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_mid_audio_sample_4.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9taWRfYXVkaW9fc2FtcGxlXzQubXAzIiwiaWF0IjoxNzMyMzE0NTI4LCJleHAiOjMxNTUzMDA3Nzg1Mjh9.GR75hn3x5J67Ar00I_PApUKht2BN9IZHzOKEXIOsF_U&t=2024-11-22T22%3A28%3A48.351Z",
+  },
 ];
 
 const openai = new OpenAI();
