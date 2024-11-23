@@ -25,13 +25,15 @@ const audioSamples = [
   },
 ];
 
-const openai = new OpenAI();
 const aai = new AssemblyAI({ apiKey: process.env.ASSEMBLYAI_API_KEY! });
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY!,
 });
 const jigsawstack = JigsawStack({
   apiKey: process.env.JIGSAWSTACK_API_KEY!,
+});
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY!,
 });
 
 const runGroq = (audioUrl: string) => {
@@ -52,6 +54,7 @@ const runOpenAI = (audioUrl: string) => {
   return openai.audio.transcriptions.create({
     file: fs.createReadStream(audioUrl),
     model: "whisper-1",
+    response_format: "verbose_json",
   });
 };
 
@@ -82,11 +85,11 @@ const providers = {
   Groq: runGroq,
   JigsawStack: runJigsawStack,
   AssemblyAI: runAssemblyAI,
-  Openai: runOpenAI,
+  OpenAI: runOpenAI,
 };
 
 const benchmark = async () => {
-  const iterations = 5;
+  const iterations = 2;
   const providerKeys = Object.keys(providers);
 
   if (!fs.existsSync("samples")) {
@@ -150,7 +153,7 @@ const benchmark = async () => {
         providerKeys.map((provider) =>
           stt(
             providers[provider],
-            ["Groq", "Openai"].includes(provider)
+            ["Groq", "OpenAI"].includes(provider)
               ? `samples/${audioSamples[audioSampleIndex].name}`
               : audioURL
           )
