@@ -92,20 +92,25 @@ const benchmark = async () => {
   const iterations = 2;
   const providerKeys = Object.keys(providers);
 
+  console.log("Downloading audio samples...");
   if (!fs.existsSync("samples")) {
     fs.mkdirSync("samples");
-    console.log("Downloading audio samples...");
-    await Promise.all(
-      audioSamples.map(async (as) => {
-        const resp = await fetch(as.url);
-        fs.writeFileSync(
-          `samples/${as.name}`,
-          Buffer.from(await resp.arrayBuffer())
-        );
-      })
-    );
-    console.log("Audio samples downloaded.");
   }
+
+  await Promise.all(
+    audioSamples.map(async (as) => {
+      if (fs.existsSync(`samples/${as.name}`)) {
+        return;
+      }
+      const resp = await fetch(as.url);
+      fs.writeFileSync(
+        `samples/${as.name}`,
+        Buffer.from(await resp.arrayBuffer())
+      );
+    })
+  );
+
+  console.log("Audio samples downloaded.");
 
   const responseTimes: {
     samples: {
