@@ -89,7 +89,7 @@ const providers = {
 };
 
 const benchmark = async () => {
-  const iterations = 2;
+  const iterations = 10;
   const providerKeys = Object.keys(providers);
 
   console.log("Downloading audio samples...");
