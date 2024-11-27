@@ -2,6 +2,26 @@
 
 This script benchmarks the response times of four speech-to-text (STT) APIs: **Groq**, **JigsawStack**, **AssemblyAI**, and **OpenAI**. It runs each API 10 times (configurable) across for audio samples of different lengths and calculates the average response time for each.
 
+[Check this out for the full results and breakdown of the benchmark](https://jigsawstack.com/blog/jigsawstack-vs-groq-vs-assemblyai-vs-openai-speech-to-text-benchmark-comparison)
+
+## Benchmark overview
+
+| **Criteria** | **JigsawStack** | **Groq** | **AssemblyAI** | **OpenAI** |
+| --- | --- | --- | --- | --- |
+| **Model** | Insanely-fast-whisper | Whisper-large-v3-turbo | Universal-1 | Whisper-2 |
+| **Latency (5s audio)** | 765ms | 631ms | 4s | 12s |
+| **Latency (3m video)** | 2.7s | 3.5s | 7.8s | 10s |
+| **Latency (30m video)** | 11s | 12s | 29s | 91s |
+| **Latency (1hr 35m video)** | 27s | Error out | 42s | Error out |
+| **Word Error Rate (WER)** | 10.30% | 12% | 8.70% | 10.60% |
+| **Diarization Support** | Yes | No | Yes | No |
+| **Timestamp** | Sentence level | Sentence level | Word level | Sentence level |
+| **Large File** | Up to 100MB | Up to 25MB | 5GB | Up to 25MB |
+| **Automatic** | Yes | Yes | Yes | Yes |
+| **Streaming Support** | No | No | Yes | No |
+| **Pricing** | $0.05/hr | $0.04/hr | $0.37/hr | $0.36/hr |
+| **Best For** | Speed, Low cost, Production apps | Low cost and lightweight app | Real-time transcription apps |  |
+
 ## Prerequisites
 
 Before running this script, ensure you have the following:
