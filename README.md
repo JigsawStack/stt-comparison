@@ -1,6 +1,6 @@
 # Speech-to-Text API Benchmarking Script
 
-This script benchmarks the response times of three speech-to-text (STT) APIs: **Groq**, **JigsawStack**, and **AssemblyAI**. It runs each API 10 times (configurable) and calculates the average response time for each.
+This script benchmarks the response times of four speech-to-text (STT) APIs: **Groq**, **JigsawStack**, **AssemblyAI**, and **OpenAI**. It runs each API 10 times (configurable) across for audio samples of different lengths and calculates the average response time for each.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Before running this script, ensure you have the following:
   - **Groq SDK**
   - **AssemblyAI**
   - **JigsawStack**
-  - **Openai**
+  - **OpenAI**
 
 ## Installation
 
@@ -22,31 +22,19 @@ Before running this script, ensure you have the following:
 
 2. **Install dependencies**:
    ```bash
+   yarn
+   ```
+   or
+   ```bash
    npm install
    ```
 
 ## Configuration
 
-1. **Set API keys** for each of the services:
+### Set API keys** for each of the services:
 
-   - Open `benchmark.ts` in a text editor.
-   - Replace the placeholders with your actual API keys:
+Use the `.env.example` file to create a `.env` file and replace the placeholders with your actual API keys:
 
-     ```javascript
-     const aai = new AssemblyAI({ apiKey: "YOUR_ASSEMBLYAI_API_KEY" });
-     const groq = new Groq({ apiKey: "YOUR_GROQ_API_KEY" });
-     const jigsawstack = new JigsawStack({ apiKey: "YOUR_JIGSAWSTACK_API_KEY" });
-     const openai = new OpenAI({
-      apiKey: "YOUR_OPENAI_API_KEY",
-     });
-     ```
-
-2. **Set the audio file or URL**:
-   - Replace the `audioUrl` variable with the URL of your audio file or set up a path to a local audio file, if using local file input (e.g., `videoplayback.mp4` in this script).
-
-     ```javascript
-     const audioUrl = "https://example.com/path/to/your/audiofile.mp3";
-     ```
 
 ## Running the Script
 
@@ -65,17 +53,17 @@ The script logs each API’s average response time. Example output:
 ```
 Iteration 1
 ...
-Average response time for Groq: 500 ms
-Average response time for JigsawStack: 450 ms
-Average response time for AssemblyAI: 400 ms
-Average response time for Openai: 400 ms
+Average response time for Groq: 3512.3759947 ms
+Average response time for JigsawStack: 2749.9410608999997 ms
+Average response time for AssemblyAI: 7808.462181100001 ms
+Average response time for Openai:  10407.212865700001 ms
 ```
 
 ## Audio Samples
 
 Here are the audio samples used in the benchmark
 
-- [Sample 1](https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_short_audio_sample_1.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9zaG9ydF9hdWRpb19zYW1wbGVfMS5tcDQiLCJpYXQiOjE3MzIyMDIzMDYsImV4cCI6MzE1NTMwMDY2NjMwNn0.I0-T5I-nkdeykmizHmq1Ut_Jjs66DxzApv2XbrV9MyM&t=2024-11-21T15%3A18%3A26.030Z) 
+- [Sample 1](https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_short_audio_sample_1.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF9zaG9ydF9hdWRpb19zYW1wbGVfMS5tcDQiLCJpYXQiOjE3MzIyMDIzMDYsImV4cCI6MzE1NTMwMDY2NjMwNn0.I0-T5I-nkdeykmizHmq1Ut_Jjs66DxzApv2XbrV9MyM&t=2024-11-21T15%3A18%3A26.030Z)
 
 - [Sample 2](https://uuvhpoxkzjnrvvajhnyb.supabase.co/storage/v1/object/sign/default/preview/stt-examples/stt_very_short_audio_sample_2.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZWZhdWx0L3ByZXZpZXcvc3R0LWV4YW1wbGVzL3N0dF92ZXJ5X3Nob3J0X2F1ZGlvX3NhbXBsZV8yLm1wMyIsImlhdCI6MTczMjIwMzIwNywiZXhwIjozMTU1MzAwNjY3MjA3fQ._R0cLbrIx_FUR3CMRYaUMj616diA_1fjWUcVq2vAONg&t=2024-11-21T15%3A33%3A27.154Z)
 
